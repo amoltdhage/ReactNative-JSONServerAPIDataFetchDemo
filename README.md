@@ -23,7 +23,7 @@ To run this React Native app, follow these steps:
 ## Demo
 
 <p align="center">
-  <img src="./assets/demo.gif" width="250" alt="Demo GIF">
+  <img src="./assets/new demo.gif" width="250" alt="Demo GIF">
 </p>
 
 ## Screenshots
