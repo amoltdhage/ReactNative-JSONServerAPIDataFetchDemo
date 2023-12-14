@@ -1,32 +1,66 @@
 # React Native User Data App
 
-A React Native application designed to fetch and display user data from a JSON server API using a FlatList component.
+This React Native application fetches and displays user data from a remote server. The app includes features such as fetching user data with a delay, unfetching data, and rendering the user information in a FlatList.
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Demo](#demo)
+- [Screenshots](#screenshots)
+- [Features](#features)
+- [Usage](#usage)
+- [Dependencies](#dependencies)
+
+## Getting Started
+
+To run this React Native app, follow these steps:
+
+1. Ensure you have React Native and its dependencies installed on your development machine.
+2. Clone this repository.
+3. Install project dependencies by running `npm install` in the project root directory.
+4. Run the app using `npx react-native run-android` for Android or `npx react-native run-ios` for iOS.
 
 ## Demo
+
 <p align="center">
   <img src="./assets/demo.gif" width="250" alt="Demo GIF">
 </p>
 
+## Screenshots
 
-## Installation
+<p align="center">
+  <img src="./assets/screenshot1.png" width="250" alt="Screenshot 1">
+  <img src="./assets/screenshot2.png" width="250" alt="Screenshot 2">
+  <img src="./assets/screenshot3.png" width="250" alt="Screenshot 3">
+</p>
 
-1. **Clone the repository:**
+## Features
 
-   ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
-   npm install
+### 1. Fetch User Data
 
-**Features:**
+- The app fetches user data from a remote server using the `fetchUserDataWithDelay` function.
+- An Activity Indicator is displayed while fetching data, and the "Fetch User Data" button is disabled during the process.
 
-**Data Fetching:** Utilizes the fetch API to retrieve user data from a JSON server API.
-**User Interface** Components: Displays user information using the FlatList component for an optimized and smooth user interface.
-**Styling:** Styled using React Native's StyleSheet for a clean and responsive design.
+### 2. Unfetch User Data
 
-**Dependencies:**
+- The app allows users to unfetch data using the "Unfetch User Data" button, which resets the data and hides the unfetch button.
 
-**React:** JavaScript library for building user interfaces.
-**React** Native: Framework for building native applications using React.
+### 3. Display User Data
+
+- User data is displayed in a FlatList with each item containing the user's ID, name, and email.
+- The app handles cases where user names or emails are not available.
+
+## Usage
+
+- After launching the app, press the "Fetch User Data" button to retrieve user information.
+- An Activity Indicator will be displayed while data is being fetched.
+- Once data is fetched, a list of users will be shown in a FlatList.
+- Press the "Unfetch User Data" button to clear the user data and hide the unfetch button.
+
+## Dependencies
+
+- React
+- React Native
 
 
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
