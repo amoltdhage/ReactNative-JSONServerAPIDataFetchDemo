@@ -1,3 +1,34 @@
+# React Native User Data App
+
+A React Native application designed to fetch and display user data from a JSON server API using a FlatList component.
+
+## Demo
+<p align="center">
+  <img src="./assets/demo.gif" width="250" alt="Demo GIF">
+</p>
+
+
+## Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
+   npm install
+
+**Features:**
+
+**Data Fetching:** Utilizes the fetch API to retrieve user data from a JSON server API.
+**User Interface** Components: Displays user information using the FlatList component for an optimized and smooth user interface.
+**Styling:** Styled using React Native's StyleSheet for a clean and responsive design.
+
+**Dependencies:**
+
+**React:** JavaScript library for building user interfaces.
+**React** Native: Framework for building native applications using React.
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
