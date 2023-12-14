@@ -6,7 +6,7 @@
  */
 
 import React, { useEffect, useState } from 'react'; 
-import { Text, View, FlatList } from 'react-native';
+import { Text, View, FlatList, StyleSheet } from 'react-native';
 
 interface UserData {
   id: number;
@@ -38,23 +38,56 @@ const App = () => {
   }, []);
 
   return (
-    <View>
-      <Text style={{ fontSize: 30 }}>Call JSON server API</Text>
+    <View style={styles.container}>
+      <Text style={styles.headerText}>Users</Text>
       {data.length ? (
         <FlatList
           data={data}
           keyExtractor={(item) => item.id.toString()}
           renderItem={({ item }) => (
-            <View>
-              <Text style={{ fontSize: 30 }}>ID: {item.id}</Text>
-              <Text style={{ fontSize: 30 }}>Name: {item.name}</Text>
-              <Text style={{ fontSize: 30 }}>Email: {item.email}</Text>
+            <View style={styles.userContainer}>
+              <Text style={styles.userId}>ID: {item.id}</Text>
+              <Text style={styles.userName}>Name: {item.name}</Text>
+              <Text style={styles.userEmail}>Email: {item.email}</Text>
             </View>
           )}
         />
-      ) : null}
+      ) : (
+        <Text style={styles.emptyText}>No users found.</Text>
+      )}
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+    backgroundColor: '#fff',
+  },
+  headerText: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  userContainer: {
+    marginBottom: 20,
+  },
+  userId: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  userName: {
+    fontSize: 18,
+  },
+  userEmail: {
+    fontSize: 16,
+    color: '#555',
+  },
+  emptyText: {
+    fontSize: 18,
+    color: 'red',
+  },
+});
 
 export default App;
